@@ -1,6 +1,6 @@
 # RoyalEnfieldObd
 
-A real-time OBD-II dashboard for the **Royal Enfield Interceptor 650**. Reads live engine data from the bike's ECU through a WiFi ELM327 dongle and displays it on a mobile-friendly web tablero.
+A real-time OBD-II dashboard for the **Royal Enfield 350**. Reads live engine data from the bike's ECU through a WiFi ELM327 dongle and displays it on a mobile-friendly web tablero.
 
 Made with care in Guatemala 🇬🇹 by a rider, for riders.
 
@@ -21,12 +21,12 @@ Made with care in Guatemala 🇬🇹 by a rider, for riders.
 
 | Component | Notes |
 |---|---|
-| Royal Enfield Interceptor 650 (2018+) | Continental GT 650 should work out of the box — same ECU and OBD wiring |
+| Royal Enfield Classic 350 | Bullet/Meteor 350 should work out of the box — same ECU and OBD wiring |
 | ELM327 WiFi dongle | Tested with **Steren SCAN-030**. Most generic ELM327 v1.5 clones should work |
 | Raspberry Pi 3B (or any Linux box) | Runs the backend + serves the frontend |
 | Mobile device | Phone/tablet mounted on the handlebar to display the dashboard |
 
-> ⚠️ The Interceptor 650 ECU does **not** speak full OBD-II. It uses a non-standard CAN protocol, and only a subset of PIDs are accessible. See `debug/CONTEXT_2.md` for the protocol notes.
+>⚠️ The Royal Enfield J-Series 350 (and Interceptor 650) ECUs do not speak full OBD-II. They utilize a non-standard CAN protocol where only a specific subset of PIDs are accessible. For the J-Series 350, ensure your dongle is forced to ISO 15765-4 CAN (11 bit, 500 kbaud) for a stable connection. See debug/CONTEXT_2.md for the protocol notes.
 
 ## Architecture
 
